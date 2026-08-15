@@ -18,4 +18,4 @@ https://42571634-gif.github.io/gastos_compartidos/
 
 La URL de Apps Script se pega desde la interfaz de la app. No esta hardcodeada en el repositorio para evitar publicar el token.
 
-La copia local queda como referencia. Al abrir la app con una URL configurada se trae el estado de Google Sheets, y cada gasto, pago de liquidacion o borrado se envia automaticamente y luego vuelve a sincronizar desde la nube.
+La copia local queda como referencia. Al abrir la app con una URL configurada se trae el estado de Google Sheets. Cada gasto, pago de liquidacion o borrado sube automaticamente el estado completo con `replaceState`, el mismo flujo que usa el boton "Subir copia local"; la lectura desde la nube queda para el inicio de la app o el boton "Traer datos" para evitar pisar cambios locales con una lectura remota vieja.
